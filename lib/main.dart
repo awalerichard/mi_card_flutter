@@ -11,13 +11,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.lightBlue,
+        /* appBar: AppBar(
+          backgroundColor: Colors.lightBlue,
+        ), */
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
-                radius: 50.0,
+                radius: 60.0,
                 // backgroundColor: Colors.red,
                 backgroundImage: AssetImage('images/profile1.jpeg'),
               ),
@@ -40,60 +43,50 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Card(
-                color: Colors.white,
-                //padding: EdgeInsets.all(10.0),
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.phone,
-                        color: Colors.teal,
-                      ),
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Text(
-                        '+358449744728',
-                        style: TextStyle(
-                          color: Colors.teal.shade900,
-                          fontFamily: 'SourceSansPro-Regular',
-                          fontSize: 20.0,
-                        ),
-                      )
-                    ],
-                  ),
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.lightBlue.shade100,
                 ),
               ),
               Card(
-                color: Colors.white,
-                //padding: EdgeInsets.all(10.0),
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Row(
-                    children: [
-                      Icon(
+                  color: Colors.white,
+                  //padding: EdgeInsets.all(10.0),
+                  margin:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.phone,
+                      color: Colors.lightBlue,
+                    ),
+                    title: Text(
+                      '+358449744728',
+                      style: TextStyle(
+                        fontFamily: 'SourceSansPro-Regular',
+                        fontSize: 20.0,
+                        color: Colors.lightBlue.shade900,
+                      ),
+                    ),
+                  )),
+              Card(
+                  color: Colors.white,
+                  //padding: EdgeInsets.all(10.0),
+                  margin:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                  child: ListTile(
+                      leading: Icon(
                         Icons.email,
-                        color: Colors.teal,
+                        color: Colors.lightBlue,
                       ),
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Text(
+                      title: Text(
                         'richardawale182@gmail.com',
                         style: TextStyle(
-                          color: Colors.teal.shade900,
+                          color: Colors.lightBlue.shade900,
                           fontFamily: 'SourceSansPro-Regular',
                           fontSize: 20.0,
                         ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
+                      ))),
             ],
           ),
         ),
@@ -142,3 +135,26 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ) */
+
+
+        /* 
+        Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      '+358449744728',
+                      style: TextStyle(
+                        color: Colors.teal.shade900,
+                        fontFamily: 'SourceSansPro-Regular',
+                        fontSize: 20.0,
+                      ),
+                    )
+                  ],
+                ),
+        */
